@@ -26,8 +26,8 @@ users = User.all
 
 10.times do 
     a = Auction.create(
-        title: Faker::Lorem.sentences(number:1),
-        description: Faker::Lorem.sentences(number:5),
+        title: Faker::Lorem.paragraph,
+        description: Faker::Lorem.paragraph(sentence_count: 5),
         ends_at: Date.tomorrow(),
         reserve_price: rand(50...1000),
         user: users.sample
