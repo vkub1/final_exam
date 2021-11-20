@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { User } from './requests';
 import SignInPage from './components/SignInPage'
+import SignUpPage from './components/SignUpPage';
 
 function App(props) {
   const [user, setUser] = useState()
@@ -38,9 +39,12 @@ function App(props) {
           <Route exact path ='/sign_in' 
             render={(routeProps) => <SignInPage {...routeProps} onSignIn={getCurrentUser}/>}>
           </Route>
+          <Route exact path ='/sign_up' 
+            render={(routeProps) => <SignUpPage {...routeProps} onSignUp={getCurrentUser}/>}>
+          </Route>
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/auctions" component={AuctionIndexPage} />
-        <AuthRoute exact path="/auctions/new" isAuthenticated={!!user}
+        <AuthRoute exact path="/auctions/new" isAllowed={!!user}
           render={(routeProps) => <AuctionNewPage {...routeProps} 
             
           /> }/> 

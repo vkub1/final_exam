@@ -58,4 +58,14 @@ export const User = {
         })
         .then(res => res.json())
     },
+    create(params) {
+        return fetch(`${baseUrl}/users`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: 'include',
+            body: JSON.stringify(params)
+        }).then(res => res.json())
+    }
 }

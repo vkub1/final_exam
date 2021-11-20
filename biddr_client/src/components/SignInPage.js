@@ -22,17 +22,16 @@ function SignInPage(props) {
 
     return( 
         <main>
-            <h1>Sign In</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
+            <form onSubmit={handleSubmit} className="col-12 col-md-12 d-flex flex-column align-items-center">
+                <div className="form-group d-flex mx-3 col-12 my-3 col-md-8">
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="email" />   
+                    <input type="email" className="form-control" name="email" id="email" />   
                 </div>
-                <div>
+                <div className="form-group d-flex col-12 mx-3 my-3 col-md-8">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" />   
+                    <input type="password" className="form-control" name="password" id="password" />   
                 </div>
-                <input type="submit" value="Sign In" />
+                <input type="submit" value="Sign In" className="btn btn-dark col-md-8 my-3 col-12 mx-3" />
             </form>
         </main>
     )

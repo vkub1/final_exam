@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import {Navbar, NavbarBrand, Nav}  from 'react-bootstrap'
 import { Session } from '../requests';
 
+
 const NavBar = ({currentUser, onSignOut}) => {
     const handleSignOut = () => {
         Session.destroy().then(() => onSignOut())
@@ -10,6 +11,7 @@ const NavBar = ({currentUser, onSignOut}) => {
 
     return(
         <Navbar variant="light">
+            <NavLink to="/" class="nav-item nav-link"><NavbarBrand>Biddr</NavbarBrand></NavLink>
             <Nav className="ms-auto mx-3">
                 { currentUser ? (
                     <a href="/" className="nav-item nav-link disabled text-dark">Hello {currentUser.name}!</a>
@@ -28,6 +30,7 @@ const NavBar = ({currentUser, onSignOut}) => {
                     <>
                     
                     <NavLink to='sign_in' className="nav-item nav-link">Sign In</NavLink>
+                    <NavLink to='sign_up' className="nav-item nav-link">Sign Up</NavLink>
                     </>
                 )
             }
