@@ -7,5 +7,7 @@ class Bid < ApplicationRecord
   def current_highest
     auction.current_price
   end
+
+  
      
 end

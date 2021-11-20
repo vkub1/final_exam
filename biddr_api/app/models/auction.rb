@@ -11,4 +11,8 @@ class Auction < ApplicationRecord
         self.bids.order("amount DESC").first.amount rescue 0
     end
 
+    def bids_desc
+        self.bids.order("amount DESC")
+    end
+
 end

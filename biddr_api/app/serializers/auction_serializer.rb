@@ -8,7 +8,7 @@ class AuctionSerializer < ActiveModel::Serializer
     :ends_at,
     :reserve_price,
     :current_price,
-
+    :bids_desc
   )
 
   belongs_to :user, key: :seller
