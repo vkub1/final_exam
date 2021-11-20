@@ -12,6 +12,8 @@ export default function AuctionIndexPage() {
         })
     })
 
+   
+
     return (
         <div>
             <div id="auctions-header"><h1 className="text-center py-3">Auctions</h1></div>

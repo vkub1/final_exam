@@ -11,12 +11,14 @@ User.destroy_all
 
 PASSWORD = "123"
 User.create(
+    name: "Admin User",
     email: 'admin@user.com',
     password: PASSWORD
 )
 
 10.times do 
     User.create(
+        name: Faker::Name.name,
         email: Faker::Internet.unique.email,
         password: PASSWORD
     )

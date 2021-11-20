@@ -14,7 +14,7 @@ class AuctionSerializer < ActiveModel::Serializer
   belongs_to :user, key: :seller
   class UserSerializer < ActiveModel::Serializer
     attributes(
-      :id,:email
+      :id,:email,:name
     )
   end
 
